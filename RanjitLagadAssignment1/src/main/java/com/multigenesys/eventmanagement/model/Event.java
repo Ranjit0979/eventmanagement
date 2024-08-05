@@ -27,13 +27,13 @@ public class Event {
     @ManyToOne
     @JoinColumn(name = "organizer_id")
     @NotNull(message = "Organizer is required")
-    @JsonBackReference
+    @JsonIgnore
     private Organizer organizer;
 
     @ManyToOne
     @JoinColumn(name = "venue_id")
     @NotNull(message = "Venue is required")
-    @JsonBackReference
+    @JsonIgnore
     private Venue venue;
 }
 
