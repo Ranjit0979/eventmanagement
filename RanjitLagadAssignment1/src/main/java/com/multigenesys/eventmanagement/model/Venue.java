@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Data
@@ -29,7 +29,7 @@ public class Venue {
     private Integer capacity;
 
     @OneToMany(mappedBy = "venue")
-    @JsonManagedReference
+    @JsonIgnore
     private List<Event> events;
 }
 
